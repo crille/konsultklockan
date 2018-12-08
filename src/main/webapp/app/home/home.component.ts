@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
                 private jhiAlertService: JhiAlertService) {}
 
     loadAll() {
+        console.log('loadAll');
         this.timeTaskService.query().subscribe(
             (res: HttpResponse<ITimeTask[]>) => {
                 this.timeTasks = res.body;

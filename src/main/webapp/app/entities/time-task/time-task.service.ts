@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 
 import { SERVER_API_URL } from 'app/app.constants';
 import { createRequestOption } from 'app/shared';
-import { ITimeTask } from 'app/shared/model/time-task.model';
+import {ITimeTask} from 'app/shared/model/time-task.model';
 
 type EntityResponseType = HttpResponse<ITimeTask>;
 type EntityArrayResponseType = HttpResponse<ITimeTask[]>;
@@ -15,6 +15,8 @@ type EntityArrayResponseType = HttpResponse<ITimeTask[]>;
 @Injectable({ providedIn: 'root' })
 export class TimeTaskService {
     public resourceUrl = SERVER_API_URL + 'api/time-tasks';
+
+    currentTimeTask: ITimeTask;
 
     constructor(private http: HttpClient) {}
 

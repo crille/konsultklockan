@@ -42,6 +42,10 @@ public class TimeTask implements Serializable {
     @JsonIgnoreProperties("")
     private Project project;
 
+    public boolean isRunning(){
+        return stop == null;
+    };
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public String getId() {
         return id;
