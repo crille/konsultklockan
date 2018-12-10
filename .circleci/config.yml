@@ -32,7 +32,6 @@ jobs:
       - run:
           name: update-npm
           command: sudo npm install -g npm@latest
-
       # Install Yarn
       - run:
           name: Download Yarn
@@ -40,8 +39,6 @@ jobs:
       - run:
             name: Install Yarn
             command: sudo apt-get update && sudo apt-get install yarn
-
-
       # Download and cache dependencies
       - restore_cache:
            keys:
